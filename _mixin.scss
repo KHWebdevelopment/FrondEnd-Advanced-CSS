@@ -1,0 +1,30 @@
+@mixin Page {
+    background: #c3cfe2;
+    width: 900px;
+    margin: auto;
+}
+@mixin H2 {
+    text-align: $TextAlineTitle;
+    padding: 30px
+}
+@mixin SocialMediaGrid {
+    display: grid;
+    grid-template-columns: 50px 160px;
+    grid-template-rows: 40px;
+    grid-template-areas: "icon";
+    width: 50px;
+    transition: width 200ms ease-out;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+  }
+  @mixin SocialMediaFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 50px;
+  }
+  @mixin Before {
+    color: #fff;
+    font-size: 20px;
+  }

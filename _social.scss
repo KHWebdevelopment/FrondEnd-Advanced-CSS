@@ -1,0 +1,69 @@
+@import "mixin";
+
+.social-media {
+    @include SocialMediaFlex();
+    .social-icon {
+      grid-area: $GridArea;
+    }
+    .social-link a {
+      color: $LinkColor;
+    }
+    .social-media-blog {
+      background-color: #e17b77;
+      @include SocialMediaGrid();
+    }
+    .social-media-blog:hover {
+      width: $SocialMediaHover;
+    }
+    .fa-laptop-code::before {
+      content: "\f5fc";
+      @include Before();
+    }
+    .social-media-twitter {
+      background-color: #00aced;
+      @include SocialMediaGrid();
+    }
+    .social-media-twitter:hover {
+      width: $SocialMediaHover;
+    }
+    .fa-twitter::before {
+      content: "\f099";
+      @include Before();
+    }
+  
+    .social-media-linkedin {
+      background-color: #007bb6;
+      @include SocialMediaGrid();
+    }
+    .social-media-linkedin:hover {
+      width: $SocialMediaHover;
+    }
+    .fa-linkedin-in::before {
+      content: "\f0e1";
+      @include Before();
+    }
+  
+    .social-media-facebook {
+      @include SocialMediaGrid();
+      background-color: #3b5998;
+    }
+    .social-media-facebook:hover {
+      width: $SocialMediaHover;
+    }
+    .fa-facebook-f::before {
+      content: "\f39e";
+      @include Before();
+    }
+  
+    .social-media-github {
+      background-color: #333;
+      @include SocialMediaGrid();
+    }
+    .social-media-github:hover {
+      width: $SocialMediaHover;
+    }
+    .fa-github::before {
+      content: "\f09b";
+      @include Before();
+    }
+  }

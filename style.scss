@@ -1,0 +1,19 @@
+@import "_variables";
+@import "_testimonial";
+@import "_portfolio";
+@import "social";
+@import "_mixin";
+
+main {
+  @include Page();
+}
+h1 {
+  text-align: $TextAlineTitle;
+}
+h2 {
+  @include H2();
+}
+article {
+  display: grid;
+  justify-items: center;
+}

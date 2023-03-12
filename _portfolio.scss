@@ -1,0 +1,69 @@
+.wrapper{
+  width: 650px;
+  background: $PageBackground;
+  margin: auto;
+  display:grid;
+  padding: 30px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 200px;
+  .portfolio {
+    display:grid;
+    align-items: center;
+    justify-items: center;
+  }
+  .stacking {
+    position:relative;
+  }
+  .stacking .stacking-overlay {
+    background: rgba(32, 32, 32, 0.9);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    margin:0;
+    padding:0;
+    transition: ease-in-out 1000ms;
+  }
+  .stacking:hover .stacking-overlay{
+    opacity: 1;
+  }
+  .stacking-image{
+    width: 180px;
+    height: 180px;
+    border-radius: 7px;
+  }
+  .stacking:hover .stacking-image {
+    filter: opacity(0);
+    transition: all ease-out 1000ms;
+  }
+  .stacking-details {
+    position: absolute;
+    text-align: center;
+    padding: 0 1rem;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: ease-in-out 1000ms;
+  }
+  .stacking:hover .stacking-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+    
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
